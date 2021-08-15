@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Speedy Cycles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/validatePass.css">
+        <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <script type="text/javascript" src="js/cycle.js"></script>
+    </head>
+    <body onresize="checkNav();">
+        <header>
+            <div class="banner">
+                <p>Speedy Cycles</p>
+            </div>
+            <div class="menu">
+                <div class="search">
+                    <form>
+                        <input type="text" name="searchBox" placeholder="Search..."></input>
+                        <button type="button" value="ent"><span class="iconify" data-icon="entypo-magnifying-glass" data-inline="false"></span></button>
+                    </form>
+                </div>
+                <a id="nav-toggle" href="#" onclick="showMenu();">&#9776;</a>
+                <ul id="tabs">
+                    <li><a href="cycle.html">Home</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">Bike Parts</a></li>
+                    <li><a href="#">Bike Gear</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>   
+        </header>
+        <div id="main">
+            <form class="pswdVal">
+                <h1>Reset Password</h1>
+                <div id="underline"></div>
+                <div id="wel">
+                    <p>Welome back to cycle! Lets reset your password</p>
+                </div>
+                <div id="valCode">
+                    <input type="number" id="code" placeholder="validation code...">
+                </div>
+                <div id="psw">
+                    <input type="password" id="pswd1" placeholder="new password...">
+                </div>
+                <div id="pswd">
+                    <input type="password" id="pswd2" placeholder="repeat new password...">
+                </div>
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+    </body>
+</html>

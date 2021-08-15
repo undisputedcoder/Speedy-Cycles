@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka|Work+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F2EEE8;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.banner{
+    width: 100%;
+    height: 65%;
+    background-color: #FFBB1E;
+    border-bottom: 1.5px solid rgba(209, 155, 31, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.banner p{
+    margin: auto;
+    vertical-align: middle;
+    font-family: 'Chilanka', cursive;
+    padding: 10px;
+    font-size: 20px;
+    width: 30%;
+}
+
+.menu{
+    background-color: #D3D0CB;
+    box-sizing: border-box;
+    height: 35%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.menu #nav-toggle{
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+    display: block;
+    width: 20px;
+}
+
+.menu #nav-toggle:hover{
+    color: #d19b1f;
+}
+
+.menu ul{
+    padding-top: 5px;
+    width: 100%;
+    display: none;
+    list-style: none;
+    background-color: rgba(211, 208, 203, 0.5);
+}
+
+.menu ul li{
+    padding: 5px;
+}
+
+.menu ul li:hover{
+    background-color: #C1BEBA;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+}
+
+.search{
+    float: right;
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+input{
+    font-family: 'Work Sans', sans-serif;
+    border: none;
+    border-bottom: 0.5px solid black;
+    background-color: #D3D0CB;
+    font-size: 12px;
+}
+
+button{
+    border: none;
+    background-color: #D3D0CB;
+    font-size: 12px;
+}
+
+.search button:hover{
+    color: #d19b1f;
+}
+
+#main{
+    padding-top: 15%;
+}
+
+#main .nwMem{
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+    margin: auto;
+    vertical-align: middle;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#main .nwMem h1{
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#main .nwMem #underline{
+    width: 105px;
+    height: 1px;
+    background: linear-gradient(to right, #FFBB1E, #ffcc54, #FFBB1E);
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 0 5px  rgba(0,0,0,0.2);
+}
+
+#main .nwMem p{
+    padding: 20px;
+    font-size: 12px;
+}
+#main .nwMem #wel{
+    padding: 10px 10px 0px 10px;
+}
+
+#main .nwMem #wel p{
+    padding: 0;
+}
+
+#main .nwMem input{
+    font-family: 'Work Sans', sans-serif;
+    border: none;
+    border-bottom: 0.5px solid rgb(216, 212, 208);
+    background-color: #F2EEE8;
+    font-size: 12px;
+    width: 300px;
+}
+
+#main .nwMem #fnm{
+    padding: 40px 0 0 0;
+}
+
+#main .nwMem #lnm{
+    padding: 40px 0 0 0;
+}
+
+#main .nwMem #usn{
+    padding: 40px 0 0 0;
+}
+
+#main .nwMem #em{
+    padding: 40px 0 0 0;
+}
+
+#main .nwMem #psw{
+    padding: 40px 0 0 0;
+}
+
+#main .nwMem #pswCom{
+    padding: 40px 0;
+}
+
+#main .nwMem button{
+    font-family: 'Work Sans', sans-serif;
+    border: none;
+    box-shadow: 0 0 5px  rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #ffcc54, #FFBB1E);
+    font-size: 12px;
+    width: 300px;
+    padding: 10px 20px 10px 20px;
+}
+
+
+@media only screen and (min-width: 768px){
+    header{
+        height: 90px;
+    }
+    .banner p{
+        font-size: 25px;
+    }
+    .menu{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .menu ul li a{
+        font-size: 13px;
+    }
+    input{
+        font-size: 13px;
+    }
+    button{
+        font-size: 13px;
+    }
+    #main{
+        padding-top: 10%;
+    }
+    #main .nwMem input{
+        width: 350px;
+    }
+    #main .nwMem button{
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 1000px){    
+    header{
+        height: 100px;
+    }
+    .banner p{
+        font-size: 30px;
+    }
+    .menu{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .menu #nav-toggle{
+        display: none;
+    }
+    .menu ul{
+        padding: 0;
+        margin: auto;
+        display: block;
+    }
+    .menu ul li{
+        float: left;
+        font-size: 14px;
+        list-style: none;
+        padding: 9px 15px;
+    }
+    .menu .search{
+        padding: 9.5px 15px;
+    }
+    input{
+        font-size: 14px;
+    }
+    #main{
+        padding-top: 5%;
+    }
+}

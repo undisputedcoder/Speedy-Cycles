@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Speedy Cycles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/cycle.css">
+        <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <script type="text/javascript" src="../js/cycle.js"></script>
+    </head>
+    <body onresize="checkNav();">
+        <div class="content">
+            <header>
+                <div class="banner">
+                    <h1>Speedy Cycles</h1>
+                </div>
+                <div class="menu">
+                    <div class="search">
+                        <form>
+                            <input type="text" name="searchBox" placeholder="Search..."></input>
+                            <button type="button" value="ent"><span class="iconify" data-icon="entypo-magnifying-glass" data-inline="false"></span></button>
+                        </form>
+                    </div>
+                    <a id="nav-toggle" href="#" onclick="showMenu();">&#9776;</a>
+                    <ul id="tabs">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="#">BIKES</a></li>
+                        <li><a href="parts.html">PARTS</a></li>
+                        <li><a href="gear.html">GEAR</a></li>
+                    </ul>
+                </div>   
+            </header>
+
+            <div style="background-color: white;">
+                <div class="divider">
+                    <h1>BIKES</h1>
+                </div>
+
+                <div class="container">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/bikes/bmx1.png">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">20" Yellow BMX</p>
+                            <p class="product-price">$365</p>
+                        </div>    
+                        <div>
+                            <button class="add">Add to cart</button>
+                        </div>                     
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/bikes/bmx2.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">19" Freestyle BMX</p>
+                            <p class="product-price">$199</p>
+                        </div>                        
+                        <div>
+                            <button class="add">Add to cart</button>
+                        </div> 
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/bikes/bmx3.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">18" Kicker BMX</p>
+                            <p class="product-price">$399</p>
+                        </div>                        
+                        <div>
+                            <button class="add">Add to cart</button>
+                        </div> 
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/bikes/bmx4.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">20" Mongoose BMX</p>
+                            <p class="product-price">$345</p>
+                        </div>                     
+                        <div>
+                            <button class="add">Add to cart</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>             
+
+            <footer class="footer">
+                <p>&copy 2019 Speedy Cycles. All Rights Reserved</p>
+            </footer>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/cycle.css">
+        <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <script type="text/javascript" src="../js/cycle.js"></script>
+    </head>
+    <body onresize="checkNav();">
+        <div class="content">
+            <header>
+                <div class="banner">
+                    <h1>Speedy Cycles</h1>
+                </div>
+                <div class="menu">
+                    <div class="search">
+                        <form>
+                            <input type="text" name="searchBox" placeholder="Search..."></input>
+                            <button type="button" value="ent"><span class="iconify" data-icon="entypo-magnifying-glass" data-inline="false"></span></button>
+                        </form>
+                    </div>
+                    <a id="nav-toggle" href="#" onclick="showMenu();">&#9776;</a>
+                    <ul id="tabs">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="bikes.html">BIKES</a></li>
+                        <li><a href="parts.html">PARTS</a></li>
+                        <li><a href="gear.html">GEAR</a></li>
+                    </ul>
+                </div>   
+            </header>
+
+            <div style="background-color: white;">
+                <div class="divider">
+                    <h1>Shopping Cart</h1>
+                </div>
+                <div>
+                    <h3>The following items are in your cart</h3>
+                </div>
+                <div class="flexy-cart" style="font-weight: 800;font-size: 18px;">
+                    <main>Product</main>
+                    <section>Quantity</section>
+                    <section>Price</section>
+                </div>       
+                <div class="flexy-cart">
+                    <main>Sport Pedal</main>
+                    <section>1</section>
+                    <section>$94</section>
+                </div> 
+                <div class="flexy-cart">
+                    <main>18" Kicker BMX</main>
+                    <section>1</section>
+                    <section>$399</section>
+                </div>    
+                <hr>    
+                <div class="flexy-cart">
+                    <main></main>
+                    <section></section>
+                    <section>$493</section>
+                </div>   
+            </div>
+
+            <footer class="footer">
+                <p>&copy 2019 Speedy Cycles. All Rights Reserved</p>
+            </footer>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Speedy Cycles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/cycle.css">
+        <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <script type="text/javascript" src="js/cycle.js"></script>
+    </head>
+    <body onresize="checkNav();">
+        <div class="content">
+            <header>
+                <div class="banner">
+                    <h1>Speedy Cycles</h1>
+                </div>
+                <div class="menu">
+                    <div class="search">
+                        <form>
+                            <input type="text" name="searchBox" placeholder="Search..."></input>
+                            <button type="button" value="ent"><span class="iconify" data-icon="entypo-magnifying-glass" data-inline="false"></span></button>                            
+                        </form>
+                    </div>
+                    <a id="nav-toggle" href="#" onclick="showMenu();">&#9776;</a>
+                    <ul id="tabs">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="html/bikes.html">BIKES</a></li>
+                        <li><a href="html/parts.html">PARTS</a></li>
+                        <li><a href="html/gear.html">GEAR</a></li>
+                    </ul>
+                    <button><a href="html/cart.html"><img src="img/cart.png"></a></button> 
+                </div>   
+            </header>
+
+            <div style="background-color: white;">
+                <div class="divider">
+                    <p>Welcome to Speedy Cycles!</p>
+                </div>
+                <div class="flexy">
+                    <main>
+                        <img src="img/bike.jpg"/>
+                    </main>
+                    <section>
+                        <h1>About Us</h1>
+                        <br>
+                        <p>Speedy cycles is an online bike store based in Perth that sells BMX bikes for people that are passionate about BMX and compete in tournaments all across the state.</p>
+                    </section>
+                </div>
+                <br>
+                <div class="flexy">
+                    <section>
+                        <h1>Sponsor</h1>
+                        <br>
+                        <p>At Speedy cycles we actively look out for new talent and sponsor our athletes to provide them with a more competitive edge.</p>
+                    </section>
+                    <main>
+                        <img src="img/comp.jpg"/>
+                    </main>                    
+                </div>
+                <h2>View our products</h2>
+                <div class="container">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/bikes/bike.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">20" Yellow BMX</p>
+                            <p class="product-price">$365</p>
+                        </div>    
+                        <div>
+                            <button class="add"><a href="html/bikes.html">View More</a></button>
+                        </div>                     
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/parts/part4.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Handlebar</p>
+                            <p class="product-price">$160</p>
+                        </div>                        
+                        <div>
+                            <button class="add"><a href="html/parts.html">View More</a></button>
+                        </div> 
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="../img/gear/jersey.jpg">
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">Jersey</p>
+                            <p class="product-price">$189</p>                            
+                        </div>
+                        <div>
+                            <button class="add"><a href="html/gear.html">View More</a></button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>&copy 2019 Speedy Cycles. All Rights Reserved</p>
+            </div>
+        </div>        
+    </body>
+</html>

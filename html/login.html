@@ -1,0 +1,143 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: welcome.php");
+    exit;
+}
+ 
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+$username = $password = "";
+$username_err = $password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Check if username is empty
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Please enter username.";
+    } else{
+        $username = trim($_POST["username"]);
+    }
+    
+    // Check if password is empty
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter your password.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate credentials
+    if(empty($username_err) && empty($password_err)){
+        // Prepare a select statement
+        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        
+        if($stmt = $mysqli->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("s", $param_username);
+            
+            // Set parameters
+            $param_username = $username;
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                // Store result
+                $stmt->store_result();
+                
+                // Check if username exists, if yes then verify password
+                if($stmt->num_rows == 1){                    
+                    // Bind result variables
+                    $stmt->bind_result($id, $username, $password);
+                    if($stmt->fetch()){
+                        if(password_verify($password, $password)){
+                            // Password is correct, so start a new session
+                            session_start();
+                            
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;                            
+                            
+                            // Redirect user to welcome page
+                            header("location: welcome.php");
+                        } else{
+                            // Display an error message if password is not valid
+                            $password_err = "The password you entered was not valid.";
+                        }
+                    }
+                } else{
+                    // Display an error message if username doesn't exist
+                    $username_err = "No account found with that username.";
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
+        
+        // Close statement
+        $stmt->close();
+    }
+    
+    // Close connection
+    $mysqli->close();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Speedy Cycles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+        <script type="text/javascript" src="js/cycle.js"></script>
+    </head>
+    <body onresize="checkNav();">
+        <header>
+            <div class="banner">
+                <p>Speedy Cycles</p>
+            </div>
+            <div class="menu">
+                <div class="search">
+                    <form>
+                        <input type="text" name="searchBox" placeholder="Search..."></input>
+                        <button type="button" value="ent"><span class="iconify" data-icon="entypo-magnifying-glass" data-inline="false"></span></button>
+                    </form>
+                </div>
+                <a id="nav-toggle" href="#" onclick="showMenu();">&#9776;</a>
+                <ul id="tabs">
+                    <li><a href="cycle.html">Home</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">Bike Parts</a></li>
+                    <li><a href="#">Bike Gear</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>   
+        </header>
+        <div id="main">
+            <form class="lgn" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <h1>Login</h1>
+                <div id="underline"></div>
+                <div id="wel">
+                    <p>Welome back to cycle! Please login to access your cycle account.</p>
+                    <p>Did you <a href="forgotPassword.html">forget your password</a>?</p>
+                </div>
+                <div id="em" class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                    <input type="username" id="username" placeholder="email...">
+					<span class="help-block"><?php echo $username_err; ?></span>
+                </div>
+                <div id="psw" class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <input type="password" id="pswd" placeholder="password...">
+					<span class="help-block"><?php echo $password_err; ?></span>
+                </div>
+                <button type="submit">Login</button>
+                <p>Not a member? <a href="newCust.html">Create account</a></p>
+            </form>
+        </div>
+    </body>
+</html>
