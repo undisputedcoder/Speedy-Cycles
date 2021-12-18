@@ -15,13 +15,17 @@ a {
 }
 
 h2 {
-    font-family: 'Chilanka', cursive;
+    font-family: 'Helvetica', sans-serif;
     margin-left: 1rem;
 }
 
 h3 {
-    font-family: 'Chilanka', cursive;
+    font-family: 'Helvetica', sans-serif;
     margin-left: 1rem;
+}
+
+img {
+    width: 100%;
 }
 
 .content {
@@ -38,7 +42,7 @@ h3 {
     height: 80px;
     background-color: #FFBB1E;
     text-align: center;
-    font-family: 'Chilanka', cursive;
+    font-family: 'Helvetica', sans-serif;
 }
 
 header{
@@ -53,7 +57,7 @@ header{
 }
 
 .divider h1 {
-    font-family: 'Chilanka', cursive;
+    font-family: 'Helvetica', sans-serif;
     text-align: center;
     margin: auto;
     width: 50%;
@@ -61,11 +65,18 @@ header{
 }
 
 .divider p {
-    font-family: 'Chilanka', cursive;
+    font-family: 'Helvetica', sans-serif;
     font-size: 36px;
     text-align: center;
     margin: auto;
     padding-top: 30px;
+}
+
+.blurb {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: 'Helvetica', sans-serif;
+    padding-bottom: 40px;
 }
 
 .banner{
@@ -92,47 +103,58 @@ header{
     display: block;
 }
 
-.menu{
-    background-color: #D3D0CB;
-    box-sizing: border-box;
-    height: 35%;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.menu #nav-toggle{
-    text-decoration: none;
-    color: black;
-    padding-left: 5px;
-    display: block;
-    width: 20px;
-}
-
-.menu #nav-toggle:hover{
-    color: #d19b1f;
-}
-
-.menu ul{
-    padding-top: 10px;
-    width: 100%;
-    display: none;
-    list-style: none;
-    background-color: rgba(211, 208, 203, 0.5);
-}
-
-.menu ul li{
-    padding: 10px;
-}
-
-.menu ul li:hover{
+.navbar{
     background-color: #C1BEBA;
+    overflow: hidden;
+    font-family: 'Work Sans', sans-serif;
 }
 
-.menu ul li a{
+.navbar a{
     text-decoration: none;
     color: black;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
+    float: left;
+    padding: 14px 16px;
+}
+
+.drop {
+    float: left;
+    overflow: hidden;
+}
+
+.drop-btn {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    margin: 0;
+    background-color: inherit;
+    padding: 14px 16px;
+    font-size: inherit;
+}
+
+.navbar a:hover, .drop:hover .drop-btn{
+    background-color: #FFBB1E;
+}
+
+.drop-links {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.drop-links a {
+    float: none;
+    display: block;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+.drop-links a:hover{
+    background-color: #FFBB1E;
+}
+
+.drop:hover .drop-links {
+    display: block;
 }
 
 .flexy {
@@ -314,11 +336,11 @@ body .itm-lrg-area .prdct-area .prdct-price{
     .banner p{
         font-size: 25px;
     }
-    .menu{
+    .navbar{
         padding-top: 4px;
         padding-bottom: 4px;
     }
-    .menu ul li a{
+    .navbar ul li a{
         font-size: 13px;
     }
     input{
@@ -336,25 +358,25 @@ body .itm-lrg-area .prdct-area .prdct-price{
     .banner p{
         font-size: 30px;
     }
-    .menu{
+    .navbar{
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    .menu #nav-toggle{
+    .navbar #nav-toggle{
         display: none;
     }
-    .menu ul{
+    .navbar ul{
         padding: 0;
         margin: auto;
         display: block;
     }
-    .menu ul li{
+    .navbar ul li{
         float: left;
         font-size: 14px;
         list-style: none;
         padding: 9px 15px;
     }
-    .menu .search{
+    .navbar .search{
         padding: 9.5px 15px;
     }
     input{
