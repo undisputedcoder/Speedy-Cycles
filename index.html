@@ -7,7 +7,55 @@
         <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
         <script type="text/javascript" src="js/cycle.js"></script>
     </head>
-    <body onresize="checkNav();">
+    <body>
+        <div class="shopping-cart" id="shopping-cart">
+            <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+
+            <div class="title">
+                <h3>Shopping Bag</h3>
+                <h5 class="remove">Remove All</h5>
+                <!-- Add shopping bag icon -->
+            </div>
+            
+            <div class="cart-item">
+
+                <div class="image-box">
+                    <img src="../img/bikes/bmx1.png" alt="product"/>
+                </div>
+
+                <div class="description">
+                    <h1>Title</h1>
+                    <h3>Subtitle</h3>
+                </div>
+
+                <div class="quantity">
+                    <div class="btn">+</div>
+                    <div class="count">1</div>
+                    <div class="btn">-</div>
+                </div>
+
+                <div class="prices">
+                    <div class="amount">$0.00</div>
+                    <div class="remove">Remove</div>
+                </div>
+            </div>
+
+            <hr>
+                <div class="checkout">
+                    <div class="total">
+                    <div>
+                    <div class="subtotal">Sub-total</div>
+                    <div class="items">1 item</div>
+                    </div>
+
+                    <div class="total-amount">$0.00</div>
+                    </div>
+
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+
+        </div>
+                
         <div class="content">
             <div class="banner">
                 <h1>Speedy Cycles</h1>
@@ -24,7 +72,12 @@
                     </div>
                 </div>
                 <a href="/html/about.html">ABOUT</a>
-                <a href="/html/cart.html">CART</a>
+                
+                <div class="cart">
+                    <button onclick="openNav()">
+                        <img src="../img/cart.svg" alt="cart" />
+                    </button>
+                </div>
             </div>
 
             <div style="background-color: white;">
@@ -36,7 +89,7 @@
                 <div class="container">
                     <div class="product">
                         <div class="product-image">
-                            <img src="../img/bikes/bike.jpg">
+                            <img src="../img/bikes/bmx1.png">
                         </div>
                         <div class="product-info">
                             <p class="product-name">20" Yellow BMX</p>
@@ -73,11 +126,20 @@
                 </div>
             </div>
             
-
             <div class="footer">
                 <p>&copy 2019 Speedy Cycles. All Rights Reserved</p>
-            </div>
+            </div>            
 
-        </div>        
+        </div>    
+        
+        <script>
+            function openNav() {
+                document.getElementById("shopping-cart").style.width = "35%"
+            }
+
+            function closeNav() {
+                document.getElementById("shopping-cart").style.width = "0"
+            }
+        </script>
     </body>
 </html>

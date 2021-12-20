@@ -1,20 +1,24 @@
 const bikes = [
     {
+        id: 0,
         name: "20\" Yellow BMX",
         price: 365.00,
         img: "../img/bikes/bmx1.png"
     },
     {
+        id: 1,
         name: "19\" Freestyle BMX",
         price: 199.00,
         img: "../img/bikes/bmx2.jpg"
     },
     {
+        id: 2,
         name: "18\" Kicker BMX",
         price: 399.00,
         img: "../img/bikes/bmx3.jpg"
     },
     {
+        id: 3,
         name: "20\" Mongoose BMX",
         price: 345.00,
         img: "../img/bikes/bmx4.jpg"

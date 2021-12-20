@@ -1,11 +1,7 @@
-let carts = document.querySelectorAll('.add')
+let cart = []
 
-for(let i=0; i < carts.length; i++) {
-    carts[i].addEventListener("click", () => {
-        console.log("clicked")
-    })
-}
+function addToCart(id) {
+    let item = bikes.find((product) => bikes.id === id)
 
-function cartCount() {
-    
+    console.log(item)
 }
