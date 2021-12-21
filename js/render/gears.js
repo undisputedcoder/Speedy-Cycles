@@ -4,9 +4,7 @@ function renderGear() {
     gear.forEach((product) => {
         productElement.innerHTML += `
         <div class="product">
-            <div class="product-image">
-                <img src="${product.img}">
-            </div>
+            <img class="product-image" src="${product.img}">
             <div class="product-info">
                 <p id="name" class="product-name">${product.name}</p>
                 <p id="price" class="product-price">${product.price}</p>

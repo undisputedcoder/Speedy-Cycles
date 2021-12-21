@@ -366,11 +366,12 @@ body .itm-lrg-area .prdct-area .prdct-price{
     align-items: center;
 }
 
-.remove {
+.remove, .remove button {
     border-bottom: 1px solid #E44C4C;
     color: #E44C4C;
     font-weight: 600;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .cart-item {
@@ -388,6 +389,17 @@ body .itm-lrg-area .prdct-area .prdct-price{
    
 .description {
     height: 100%;
+    width: 25%;
+}
+
+.description h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.description h3 {
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .quantity {
@@ -397,7 +409,7 @@ body .itm-lrg-area .prdct-area .prdct-price{
     align-items: center;
 }
 
-.btn {
+.plus-btn button, .minus-btn button{
     background-color: #d9d9d9;
     width: 25px;
     height: 25px;
