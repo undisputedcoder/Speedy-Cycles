@@ -9,6 +9,7 @@
         <script type="text/javascript" src="js/cart.js" async></script>
     </head>
     <body>
+        
         <div class="shopping-cart" id="shopping-cart">
             <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
 
@@ -36,12 +37,16 @@
                     <button class="checkout-btn">Checkout</button>
                 </div>
         </div>
-                
-        <div class="content">
+
+        <div class="top">
+            <div class="bar">
+                <div class="bar-link">
+                    <a href="html/login.html">My Account</a>
+                </div>
+            </div>
             <div class="banner">
                 <h1>Speedy Cycles</h1>
             </div>
-            
             <div class="navbar">
                 <a href="#">HOME</a>
                 <div class="drop">
@@ -53,6 +58,7 @@
                     </div>
                 </div>
                 <a href="/html/about.html">ABOUT</a>
+                <a href="/html/login.html">Account</a>
                 
                 <div class="cart">
                     <button onclick="openNav()">
@@ -60,11 +66,77 @@
                     </button>
                 </div>
             </div>
-
-            <div>
-                <div>
-                    <img src="img/bike.jpg"/>
+        </div>
+                
+        <div class="content">
+            <br>
+            <div class="main-content">
+                
+                <div class="main-section1">
+                    <img src="img/eerik-sandstrom-lcvT6uWne2Q-unsplash.jpg" alt="bike1" />
+                    <div class="main-text">
+                        <p>Some Text</p>
+                        <p style="font-size: 3rem;">Some More Text</p>
+                        <a href="#">Find Now</a>
+                    </div>
                 </div>
+
+                <div class="main-section2">
+                    <div class="main-section2-1">
+                        <img src="img/patrick-hendry-1ow9zrlldJU-unsplash.jpg" alt="bike2" />
+                        <div class="image-text">
+                            <p>Some Text</p>
+                            <p style="font-size: 1.5rem;">Some More Text</p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+
+                    <div class="main-section2-2">
+                        <img src="img/store.jpg" alt="bike1" />
+                        <div class="image-text">
+                            <p>Some Text</p>
+                            <p style="font-size: 1.5rem;">Some More Text</p>
+                            <a href="#">Find Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Shop By Category</h2>
+                    <div class="categories">
+                        <div class="category-style">
+                            <img src="img/" alt="ebike"/>
+                            <div class="category-label">
+                                <p>Electric Bikes</p>
+                            </div>
+                        </div>
+                        <div class="category-style">
+                            <img src="img/fernando-munoz-OCTeop9Idp4-unsplash.jpg" alt="mountain"/>
+                            <div class="category-label">
+                                <p>Mountain Bikes</p>
+                            </div>
+                        </div>
+                        <div class="category-style">
+                            <img src="img/munbaik-cycling-clothing-tfuzApwXaSQ-unsplash.jpg" alt="road"/>
+                            <div class="category-label">
+                                <p>Road Bikes</p>
+                            </div>
+                        </div>
+                        <div class="category-style">
+                            <img src="img/" alt="women"/>
+                            <div class="category-label">
+                                <p>Women Bikes</p>
+                            </div>
+                        </div>
+                        <div class="category-style">
+                            <img src="img/danny-nee-6kwiN9XEn_I-unsplash.jpg" alt="kid"/>
+                            <div class="category-label">
+                                <p>Kids Bikes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <br>
                 <h2>View our products</h2>
                 <div class="container">
@@ -72,7 +144,6 @@
                         <img class="product-image" src="../img/bikes/bmx1.png">
                         <div class="product-info">
                             <p class="product-name">20" Yellow BMX</p>
-                            <p class="product-price">$365</p>
                         </div>    
                         <div>
                             <button class="add" ><a href="html/bikes.html">View More</a></button>
@@ -82,7 +153,6 @@
                         <img class="product-image" src="../img/parts/part4.jpg">
                         <div class="product-info">
                             <p class="product-name">Handlebar</p>
-                            <p class="product-price">$160</p>
                         </div>                        
                         <div>
                             <button class="add" ><a href="html/parts.html">View More</a></button>
@@ -91,8 +161,7 @@
                     <div class="product">
                         <img class="product-image" src="../img/gear/jersey.jpg">
                         <div class="product-info">
-                            <p class="product-name">Jersey</p>
-                            <p class="product-price">$189</p>                            
+                            <p class="product-name">Jersey</p>                     
                         </div>
                         <div>
                             <button class="add" ><a href="html/gear.html">View More</a></button>
